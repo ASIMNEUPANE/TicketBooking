@@ -27,6 +27,11 @@ const userSchema = new Schema({
     required: true,
   },
   image:{type:String},
+  bookings:{
+    type: Array,
+    default: [],
+},
+
 
   isActive: { type: Boolean, default: false },
   ...commonSchema,
