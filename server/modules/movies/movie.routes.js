@@ -8,7 +8,7 @@ const storage = multer.diskStorage({
     cb(null, "./public/movies");
   },
   filename: function (req, file, cb) {
-    const uniqueSuffix = Date.now() + "." + file.originalname.split(". ")[1];
+    const uniqueSuffix = Date.now() + "." + file.originalname.split(".")[1];
     cb(null, uniqueSuffix);
   },
 });
